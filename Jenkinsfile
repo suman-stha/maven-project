@@ -1,11 +1,11 @@
-def mvnHome = tool name: 'mymaven', type: 'maven'
+
 pipeline {
     agent any
     stages{
         stage('Build'){
             steps {
                 
-		sh "${mvnHome}/bin/mvn package"
+		sh 'mvn clean package'
                 
             }
             post {
